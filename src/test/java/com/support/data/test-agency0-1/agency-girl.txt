@@ -1,0 +1,6 @@
+[{"iD":"1","iDinInt":1.0,"login":"u59ae7c4295546","name":"girl_a","operName":"oper1","pass":"2df781a6"},
+{"iD":"2","iDinInt":2.0,"login":"u59ae7c446f35b","name":"girl_b","operName":"oper1","pass":"d6e87223"},
+{"iD":"3","iDinInt":3.0,"login":"u59ae7c459755b","name":"girl_c","operName":"oper1","pass":"c0906582"},
+{"iD":"4","iDinInt":4.0,"login":"u59ae7c46bba9c","name":"girl_d","operName":"oper2","pass":"2eaac739"},
+{"iD":"5","iDinInt":5.0,"login":"u59ae7c47dd18b","name":"girl_e","operName":"oper2","pass":"7a104cba"},
+{"iD":"6","iDinInt":6.0,"login":"u59ae7c4909f6b","name":"girl_f","operName":"oper2","pass":"a4831553"}]

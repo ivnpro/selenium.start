@@ -1,0 +1,2 @@
+[{"listGirls":["girl_a","girl_b","girl_c"],"login":"opcf33e50e9a06","name":"oper1","pass":"b4f12a80d6c8","rate":"0.07","rateFloat":0.07},
+{"listGirls":["girl_d","girl_e","girl_f"],"login":"op9d598a7f6033","name":"oper2","pass":"95233dc5e545","rate":"0.07","rateFloat":0.07}]
