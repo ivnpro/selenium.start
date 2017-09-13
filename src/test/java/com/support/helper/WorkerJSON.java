@@ -14,7 +14,7 @@ import static com.support.helper.Linker.stage;
 
 public class WorkerJSON {
     
-    public static String BASE_PATH = "C:\\Project\\wiggum\\autotest\\src\\";
+    public static String BASE_PATH = "/var/www/selenium.stat/src/";
             
     public void writeAgencyToJSON (Agency writingAgency){
 //        Agency newAgency = new Agency(writingAgency.getTitle(), writingAgency.getEmail(), writingAgency.getPass());
