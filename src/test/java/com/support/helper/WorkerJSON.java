@@ -13,12 +13,15 @@ import static com.support.helper.Linker.stage;
 
 
 public class WorkerJSON {
+    
+    public static String BASE_PATH = "C:\\Project\\wiggum\\autotest\\src\\";
+            
     public void writeAgencyToJSON (Agency writingAgency){
 //        Agency newAgency = new Agency(writingAgency.getTitle(), writingAgency.getEmail(), writingAgency.getPass());
         String jsonString = JSON.toJSONString(writingAgency);
-        new File("C:\\second\\src\\test\\java\\com\\support\\data\\"+writingAgency.getTitle()+"-"+stage).mkdirs();
+        new File(BASE_PATH + "test\\java\\com\\support\\data\\"+writingAgency.getTitle()+"-"+stage).mkdirs();
         File fileAgency = new File(
-                "C:\\second\\src\\test\\java\\com\\support\\data\\"+writingAgency.getTitle()+"-"+stage,"data_agency.txt");
+                BASE_PATH + "test\\java\\com\\support\\data\\"+writingAgency.getTitle()+"-"+stage,"data_agency.txt");
 
         try{
             FileWriter logFileAg = new FileWriter(fileAgency, false);
@@ -34,7 +37,7 @@ public class WorkerJSON {
 
         try{
         BufferedReader br = new BufferedReader(new FileReader(
-                "C:\\second\\src\\test\\java\\com\\support\\data\\"+titleAg+"-"+stage+"\\data_agency.txt "));
+                BASE_PATH + "test\\java\\com\\support\\data\\"+titleAg+"-"+stage+"\\data_agency.txt "));
 
             String jsonAg = br.readLine();
             agFromJson = JSON.parseObject(jsonAg, Agency.class);
@@ -48,7 +51,7 @@ public class WorkerJSON {
         List<Girl> listGirls;
         String jsonGirl;
         StringBuilder sb = new StringBuilder();
-        Path fileGirl = Paths.get("C:\\second\\src\\test\\java\\com\\support\\data\\"+titleAg+"-"+stage+"\\agency-girl.txt");
+        Path fileGirl = Paths.get(BASE_PATH + "test\\java\\com\\support\\data\\"+titleAg+"-"+stage+"\\agency-girl.txt");
 
         try {
             if (!Files.exists(fileGirl)){
@@ -86,7 +89,7 @@ public class WorkerJSON {
             // Запись новой коллекции в строку и добавление переносов строки(принципиально до создания FileWriter, а то коллекция занулится)
             String jsonUpdateList = JSON.toJSONString(listGirls);
 
-            FileWriter newEmptyList = new FileWriter("C:\\second\\src\\test\\java\\com\\support\\data\\"+titleAg+"-"+stage+"\\agency-girl.txt", false);
+            FileWriter newEmptyList = new FileWriter(BASE_PATH + "test\\java\\com\\support\\data\\"+titleAg+"-"+stage+"\\agency-girl.txt", false);
             newEmptyList.write(jsonUpdateList.replaceAll("},","},\n"));
             newEmptyList.flush();
 
@@ -98,7 +101,7 @@ public class WorkerJSON {
         List<Girl> listGirls;
         String jsonGirl;
         StringBuilder sb = new StringBuilder();
-        Path fileGirl = Paths.get("C:\\second\\src\\test\\java\\com\\support\\data\\"+titleAg+"-"+stage+"\\agency-girl.txt");
+        Path fileGirl = Paths.get(BASE_PATH + "test\\java\\com\\support\\data\\"+titleAg+"-"+stage+"\\agency-girl.txt");
 
         try {
             BufferedReader bufferJsonGirl = Files.newBufferedReader(fileGirl);
@@ -126,7 +129,7 @@ public class WorkerJSON {
         List<Girl> listGirls = null;
         String jsonGirl;
         StringBuilder sb = new StringBuilder();
-        Path fileGirl = Paths.get("C:\\second\\src\\test\\java\\com\\support\\data\\"+titleAg+"-"+stage+"\\agency-girl.txt");
+        Path fileGirl = Paths.get(BASE_PATH + "test\\java\\com\\support\\data\\"+titleAg+"-"+stage+"\\agency-girl.txt");
 
         try {
             BufferedReader bufferJsonGirl = Files.newBufferedReader(fileGirl);
@@ -146,7 +149,7 @@ public class WorkerJSON {
         List<Operator> listOperators;
         String jsonOperator;
         StringBuilder sb = new StringBuilder();
-        Path fileOperator = Paths.get("C:\\second\\src\\test\\java\\com\\support\\data\\"+titleAg+"-"+stage+"\\agency-operator.txt");
+        Path fileOperator = Paths.get(BASE_PATH + "test\\java\\com\\support\\data\\"+titleAg+"-"+stage+"\\agency-operator.txt");
 
         try {
             if (!Files.exists(fileOperator)) {
@@ -181,7 +184,7 @@ public class WorkerJSON {
             // Запись новой коллекции в строку и добавление переносов строки(принципиально до создания FileWriter, а то коллекция занулится)
             String jsonUpdateList = JSON.toJSONString(listOperators);
 
-            FileWriter newEmptyList = new FileWriter("C:\\second\\src\\test\\java\\com\\support\\data\\"+titleAg+"-"+stage+"\\agency-operator.txt", false);
+            FileWriter newEmptyList = new FileWriter(BASE_PATH + "test\\java\\com\\support\\data\\"+titleAg+"-"+stage+"\\agency-operator.txt", false);
             newEmptyList.write(jsonUpdateList.replaceAll("},", "},\n"));
             newEmptyList.flush();
         } catch(IOException ex){System.out.println(ex.getMessage());}
@@ -192,7 +195,7 @@ public class WorkerJSON {
         List<Operator> listOperator;
         String jsonOperator;
         StringBuilder sb = new StringBuilder();
-        Path fileOperator = Paths.get("C:\\second\\src\\test\\java\\com\\support\\data\\"+titleAg+"-"+stage+"\\agency-operator.txt");
+        Path fileOperator = Paths.get(BASE_PATH + "test\\java\\com\\support\\data\\"+titleAg+"-"+stage+"\\agency-operator.txt");
 
         try {
             BufferedReader bufferJsonOperator = Files.newBufferedReader(fileOperator);

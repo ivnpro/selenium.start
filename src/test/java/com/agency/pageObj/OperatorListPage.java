@@ -63,7 +63,7 @@ public class OperatorListPage extends BasePageAg{
 
         // Запись объекта Operator в JSON формате в файл
         String titleAg = driver.findElement(titleAgLoc).getAttribute("innerHTML");
-        try(FileWriter logFileAg = new FileWriter("C:\\second\\src\\test\\java\\com\\support\\data\\agency-"+titleAg+".txt", true))
+        try(FileWriter logFileAg = new FileWriter(WorkerJSON.BASE_PATH + "test\\java\\com\\support\\data\\agency-"+titleAg+".txt", true))
         {
             String jsonString = JSON.toJSONString(testOper);
             logFileAg.write(" \n"+"operator: "+jsonString);

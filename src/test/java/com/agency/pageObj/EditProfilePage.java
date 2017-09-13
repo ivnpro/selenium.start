@@ -71,7 +71,7 @@ public class EditProfilePage extends BasePageAg {
         Actions move = new Actions(driver);
 
         WebElement upload0 = driver.findElement(By.xpath("//*[@id=\"file-uploader0\"]"));
-        upload0.sendKeys("C:\\second\\src\\1.jpg");
+        upload0.sendKeys(WorkerJSON.BASE_PATH + "1.jpg");
         try {
             Thread.sleep(1000);
             move.click(driver.findElement(uploadVerPhotoBtn)).build().perform();
@@ -83,7 +83,7 @@ public class EditProfilePage extends BasePageAg {
 
 
         WebElement upload = driver.findElement(By.xpath("//*[@id=\"file-uploader1\"]"));
-        upload.sendKeys("C:\\second\\src\\1.jpg");
+        upload.sendKeys(WorkerJSON.BASE_PATH+"1.jpg");
 //        driver.findElement(By.id("file-submit")).click();
         try {
             Thread.sleep(1000);
